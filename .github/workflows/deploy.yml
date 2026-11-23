@@ -24,11 +24,10 @@ jobs:
       - name: 拉取代码
         uses: actions/checkout@v4
 
+      # 前置条件：仓库 Settings → Pages → Source 必须已选为 GitHub Actions。
+      # GITHUB_TOKEN 无权自动创建 Pages 站点，首次启用需手动完成一次。
       - name: 配置 Pages
         uses: actions/configure-pages@v5
-        with:
-          # 仓库尚未启用 Pages 时自动启用（Source 设为 GitHub Actions）
-          enablement: true
 
       - name: 安装 Node 并构建
         uses: actions/setup-node@v4
