@@ -1,0 +1,842 @@
+{
+  "key": "windows",
+  "label": "Windows 快捷键",
+  "subtitle": "系统操作 · 窗口管理 · 高效捷径",
+  "icon": "🪟",
+  "accent": "#0891b2",
+  "categories": [
+    "文件与文件夹",
+    "窗口管理",
+    "系统操作",
+    "文本编辑",
+    "Win 键组合",
+    "命令行与其他"
+  ],
+  "entries": [
+    {
+      "id": "windows-001",
+      "name": "打开文件资源管理器",
+      "category": "文件与文件夹",
+      "purpose": "快速打开文件资源管理器",
+      "syntax": "Win + E",
+      "example": "任意界面按下即可打开",
+      "note": "比从开始菜单找更快",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "打开文件资源管理器"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-002",
+      "name": "新建文件夹",
+      "category": "文件与文件夹",
+      "purpose": "在当前目录新建文件夹",
+      "syntax": "Ctrl + Shift + N",
+      "example": "资源管理器内按下即可新建",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "新建文件夹"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-003",
+      "name": "重命名选中项",
+      "category": "文件与文件夹",
+      "purpose": "重命名文件或文件夹",
+      "syntax": "F2",
+      "example": "选中后按 F2，输入新名称回车",
+      "note": "选中多个会批量加序号",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "重命名选中项"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-004",
+      "name": "删除到回收站",
+      "category": "文件与文件夹",
+      "purpose": "删除选中项到回收站",
+      "syntax": "Delete",
+      "example": "选中后按 Delete",
+      "note": "可从回收站还原",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "删除到回收站"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-005",
+      "name": "永久删除",
+      "category": "文件与文件夹",
+      "purpose": "不经过回收站直接删除",
+      "syntax": "Shift + Delete",
+      "example": "选中后按 Shift + Delete",
+      "note": "不可恢复，谨慎使用",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "永久删除"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-006",
+      "name": "全选",
+      "category": "文件与文件夹",
+      "purpose": "选中当前文件夹所有内容",
+      "syntax": "Ctrl + A",
+      "example": "文件夹内按 Ctrl + A",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "全选"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-007",
+      "name": "复制 / 剪切 / 粘贴",
+      "category": "文件与文件夹",
+      "purpose": "复制、剪切与粘贴文件或文本",
+      "syntax": "Ctrl + C / X / V",
+      "example": "系统通用快捷键",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "复制 / 剪切 / 粘贴"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-008",
+      "name": "撤销操作",
+      "category": "文件与文件夹",
+      "purpose": "撤销上一步文件操作",
+      "syntax": "Ctrl + Z",
+      "example": "资源管理器内按 Ctrl + Z",
+      "note": "可撤销删除、移动、重命名",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "撤销操作"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-009",
+      "name": "跳转到地址栏",
+      "category": "文件与文件夹",
+      "purpose": "定位到资源管理器地址栏",
+      "syntax": "Ctrl + L",
+      "example": "按后可直接输入路径并回车",
+      "note": "Alt + D 同样有效",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "跳转到地址栏"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-010",
+      "name": "返回上一级",
+      "category": "文件与文件夹",
+      "purpose": "回到上级文件夹",
+      "syntax": "Alt + ↑",
+      "example": "资源管理器内按 Alt + ↑",
+      "note": "多次按逐层返回",
+      "badge": "快捷键",
+      "tags": [
+        "文件与文件夹",
+        "返回上一级"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-011",
+      "name": "切换窗口",
+      "category": "窗口管理",
+      "purpose": "在打开的窗口间切换",
+      "syntax": "Alt + Tab",
+      "example": "按住 Alt 反复按 Tab",
+      "note": "松开 Alt 即切换到选中窗口",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "切换窗口"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-012",
+      "name": "任务视图",
+      "category": "窗口管理",
+      "purpose": "查看所有窗口与虚拟桌面",
+      "syntax": "Win + Tab",
+      "example": "按 Win + Tab 打开任务视图",
+      "note": "可新建/切换虚拟桌面",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "任务视图"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-013",
+      "name": "显示桌面",
+      "category": "窗口管理",
+      "purpose": "一键显示桌面",
+      "syntax": "Win + D",
+      "example": "按 Win + D 显示桌面",
+      "note": "再按一次恢复所有窗口",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "显示桌面"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-014",
+      "name": "预览桌面",
+      "category": "窗口管理",
+      "purpose": "临时透视桌面",
+      "syntax": "Win + ,",
+      "example": "按住 Win + 逗号临时预览桌面",
+      "note": "松开按键即恢复",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "预览桌面"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-015",
+      "name": "窗口半屏贴靠",
+      "category": "窗口管理",
+      "purpose": "将窗口贴靠到屏幕左/右半边",
+      "syntax": "Win + ← / →",
+      "example": "按 Win + ← 贴左半屏",
+      "note": "分屏多任务常用",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "窗口半屏贴靠"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-016",
+      "name": "最大化 / 还原窗口",
+      "category": "窗口管理",
+      "purpose": "最大化或还原当前窗口",
+      "syntax": "Win + ↑ / ↓",
+      "example": "Win + ↑ 最大化，Win + ↓ 还原",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "最大化 / 还原窗口"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-017",
+      "name": "关闭当前窗口",
+      "category": "窗口管理",
+      "purpose": "关闭当前程序窗口",
+      "syntax": "Alt + F4",
+      "example": "按 Alt + F4 关闭窗口",
+      "note": "在桌面按会弹出关机菜单",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "关闭当前窗口"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-018",
+      "name": "最小化所有窗口",
+      "category": "窗口管理",
+      "purpose": "最小化全部窗口",
+      "syntax": "Win + M",
+      "example": "按 Win + M 最小化全部",
+      "note": "恢复用 Win + Shift + M",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "最小化所有窗口"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-019",
+      "name": "切换虚拟桌面",
+      "category": "窗口管理",
+      "purpose": "在多个虚拟桌面间切换",
+      "syntax": "Ctrl + Win + ← / →",
+      "example": "按 Ctrl + Win + ← 切到左侧桌面",
+      "note": "配合任务视图创建桌面",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "切换虚拟桌面"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-020",
+      "name": "打开任务管理器",
+      "category": "窗口管理",
+      "purpose": "直接调出任务管理器",
+      "syntax": "Ctrl + Shift + Esc",
+      "example": "按 Ctrl + Shift + Esc",
+      "note": "比 Ctrl + Alt + Del 更快",
+      "badge": "快捷键",
+      "tags": [
+        "窗口管理",
+        "打开任务管理器"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-021",
+      "name": "锁定计算机",
+      "category": "系统操作",
+      "purpose": "锁屏并返回登录界面",
+      "syntax": "Win + L",
+      "example": "按 Win + L 立即锁屏",
+      "note": "离开工位必备",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "锁定计算机"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-022",
+      "name": "打开运行对话框",
+      "category": "系统操作",
+      "purpose": "运行程序或命令",
+      "syntax": "Win + R",
+      "example": "按 Win + R 输入命令回车",
+      "note": "如输入 cmd、regedit",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "打开运行对话框"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-023",
+      "name": "打开系统设置",
+      "category": "系统操作",
+      "purpose": "打开 Windows 设置",
+      "syntax": "Win + I",
+      "example": "按 Win + I 打开设置",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "打开系统设置"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-024",
+      "name": "打开 Windows 搜索",
+      "category": "系统操作",
+      "purpose": "搜索文件、应用与设置",
+      "syntax": "Win + S",
+      "example": "按 Win + S 打开搜索框",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "打开 Windows 搜索"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-025",
+      "name": "打开操作中心",
+      "category": "系统操作",
+      "purpose": "查看通知与快捷设置",
+      "syntax": "Win + A",
+      "example": "按 Win + A 打开操作中心",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "打开操作中心"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-026",
+      "name": "全屏截图",
+      "category": "系统操作",
+      "purpose": "截取整个屏幕并自动保存",
+      "syntax": "Win + PrtScn",
+      "example": "按 Win + PrtScn",
+      "note": "自动保存到 图片\\屏幕截图",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "全屏截图"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-027",
+      "name": "区域截图",
+      "category": "系统操作",
+      "purpose": "调用截图工具框选区域",
+      "syntax": "Win + Shift + S",
+      "example": "按 Win + Shift + S 框选",
+      "note": "截图进入剪贴板，可粘贴编辑",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "区域截图"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-028",
+      "name": "放大镜",
+      "category": "系统操作",
+      "purpose": "放大 / 缩小屏幕显示",
+      "syntax": "Win + + / -",
+      "example": "按 Win + + 放大，Win + - 缩小",
+      "note": "按 Win + Esc 退出",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "放大镜"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-029",
+      "name": "语音输入",
+      "category": "系统操作",
+      "purpose": "启动语音键入",
+      "syntax": "Win + H",
+      "example": "按 Win + H 打开语音输入",
+      "note": "将语音转为文字",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "语音输入"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-030",
+      "name": "输入表情符号",
+      "category": "系统操作",
+      "purpose": "打开表情与符号面板",
+      "syntax": "Win + .",
+      "example": "按 Win + .（句号）打开",
+      "note": "Win + ; 同样可打开",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "输入表情符号"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-031",
+      "name": "查看系统信息",
+      "category": "系统操作",
+      "purpose": "打开系统属性/关于窗口",
+      "syntax": "Win + Pause",
+      "example": "按 Win + Pause（Break）",
+      "note": "查看 CPU、内存、系统版本",
+      "badge": "快捷键",
+      "tags": [
+        "系统操作",
+        "查看系统信息"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-032",
+      "name": "撤销 / 重做",
+      "category": "文本编辑",
+      "purpose": "撤销与重做操作",
+      "syntax": "Ctrl + Z / Ctrl + Y",
+      "example": "通用编辑快捷键",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文本编辑",
+        "撤销 / 重做"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-033",
+      "name": "复制 / 剪切 / 粘贴",
+      "category": "文本编辑",
+      "purpose": "复制剪切粘贴文本",
+      "syntax": "Ctrl + C / X / V",
+      "example": "系统通用快捷键",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文本编辑",
+        "复制 / 剪切 / 粘贴"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-034",
+      "name": "全选文本",
+      "category": "文本编辑",
+      "purpose": "选中全部文本",
+      "syntax": "Ctrl + A",
+      "example": "通用编辑快捷键",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文本编辑",
+        "全选文本"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-035",
+      "name": "加粗 / 倾斜 / 下划线",
+      "category": "文本编辑",
+      "purpose": "设置文字格式",
+      "syntax": "Ctrl + B / I / U",
+      "example": "在支持的编辑器中按对应键",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文本编辑",
+        "加粗 / 倾斜 / 下划线"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-036",
+      "name": "删除光标前单词",
+      "category": "文本编辑",
+      "purpose": "一次删除一个单词",
+      "syntax": "Ctrl + Backspace",
+      "example": "按 Ctrl + Backspace",
+      "note": "比逐字删除快",
+      "badge": "快捷键",
+      "tags": [
+        "文本编辑",
+        "删除光标前单词"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-037",
+      "name": "跳到行首 / 行尾",
+      "category": "文本编辑",
+      "purpose": "光标移到当前行首尾",
+      "syntax": "Home / End",
+      "example": "按 Home 到行首，End 到行尾",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文本编辑",
+        "跳到行首 / 行尾"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-038",
+      "name": "跳到词首 / 词尾",
+      "category": "文本编辑",
+      "purpose": "光标按单词移动",
+      "syntax": "Ctrl + ← / →",
+      "example": "按 Ctrl + ← 移到前一个词",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文本编辑",
+        "跳到词首 / 词尾"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-039",
+      "name": "选中到行首 / 行尾",
+      "category": "文本编辑",
+      "purpose": "从光标选中到行首尾",
+      "syntax": "Shift + Home / End",
+      "example": "按 Shift + Home 选中到行首",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文本编辑",
+        "选中到行首 / 行尾"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-040",
+      "name": "软回车换行",
+      "category": "文本编辑",
+      "purpose": "在支持的编辑器内强制换行",
+      "syntax": "Shift + Enter",
+      "example": "按 Shift + Enter 换行不分段",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文本编辑",
+        "软回车换行"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-041",
+      "name": "打开高级用户菜单",
+      "category": "Win 键组合",
+      "purpose": "调出隐藏的系统管理菜单",
+      "syntax": "Win + X",
+      "example": "按 Win + X 打开菜单",
+      "note": "含设备管理器、磁盘管理等",
+      "badge": "快捷键",
+      "tags": [
+        "Win 键组合",
+        "打开高级用户菜单"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-042",
+      "name": "打开投影设置",
+      "category": "Win 键组合",
+      "purpose": "设置显示与投影模式",
+      "syntax": "Win + P",
+      "example": "按 Win + P 选择复制/扩展",
+      "note": "连接投影仪时常用",
+      "badge": "快捷键",
+      "tags": [
+        "Win 键组合",
+        "打开投影设置"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-043",
+      "name": "连接蓝牙设备",
+      "category": "Win 键组合",
+      "purpose": "打开蓝牙设备连接面板",
+      "syntax": "Win + K",
+      "example": "按 Win + K 搜索蓝牙设备",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "Win 键组合",
+        "连接蓝牙设备"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-044",
+      "name": "轻松使用设置",
+      "category": "Win 键组合",
+      "purpose": "打开辅助功能设置",
+      "syntax": "Win + U",
+      "example": "按 Win + U 打开轻松使用",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "Win 键组合",
+        "轻松使用设置"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-045",
+      "name": "还原最小化窗口",
+      "category": "Win 键组合",
+      "purpose": "还原所有被最小化的窗口",
+      "syntax": "Win + Shift + M",
+      "example": "按 Win + Shift + M",
+      "note": "配合 Win + M 使用",
+      "badge": "快捷键",
+      "tags": [
+        "Win 键组合",
+        "还原最小化窗口"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-046",
+      "name": "切换输入法语言",
+      "category": "Win 键组合",
+      "purpose": "在不同输入语言间切换",
+      "syntax": "Win + Space",
+      "example": "按 Win + 空格切换",
+      "note": "多语言输入必备",
+      "badge": "快捷键",
+      "tags": [
+        "Win 键组合",
+        "切换输入法语言"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-047",
+      "name": "打开屏幕键盘",
+      "category": "Win 键组合",
+      "purpose": "调出触摸屏幕键盘",
+      "syntax": "Win + Ctrl + O",
+      "example": "按 Win + Ctrl + O",
+      "note": "无实体键盘时可用",
+      "badge": "快捷键",
+      "tags": [
+        "Win 键组合",
+        "打开屏幕键盘"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-048",
+      "name": "打开游戏栏",
+      "category": "Win 键组合",
+      "purpose": "调出 Xbox Game Bar 录屏",
+      "syntax": "Win + G",
+      "example": "按 Win + G 打开游戏栏",
+      "note": "可录屏与查看性能",
+      "badge": "快捷键",
+      "tags": [
+        "Win 键组合",
+        "打开游戏栏"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-049",
+      "name": "以管理员打开 PowerShell",
+      "category": "命令行与其他",
+      "purpose": "打开管理员权限终端",
+      "syntax": "Win + X，然后 A",
+      "example": "按 Win + X 再按 A",
+      "note": "会弹出 UAC 确认",
+      "badge": "快捷键",
+      "tags": [
+        "命令行与其他",
+        "以管理员打开 PowerShell"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-050",
+      "name": "打开命令提示符",
+      "category": "命令行与其他",
+      "purpose": "快速打开 CMD",
+      "syntax": "Win + R → cmd",
+      "example": "按 Win + R 输入 cmd 回车",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "命令行与其他",
+        "打开命令提示符"
+      ],
+      "featured": true
+    },
+    {
+      "id": "windows-051",
+      "name": "在此处打开终端",
+      "category": "命令行与其他",
+      "purpose": "在资源管理器当前目录打开终端",
+      "syntax": "Shift + 右键空白处",
+      "example": "按住 Shift 点击右键",
+      "note": "选择「在此处打开 PowerShell」",
+      "badge": "快捷键",
+      "tags": [
+        "命令行与其他",
+        "在此处打开终端"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-052",
+      "name": "复制命令行文本",
+      "category": "命令行与其他",
+      "purpose": "复制终端中选中内容",
+      "syntax": "Ctrl + C",
+      "example": "选中文本后按 Ctrl + C",
+      "note": "需启用快速编辑模式",
+      "badge": "快捷键",
+      "tags": [
+        "命令行与其他",
+        "复制命令行文本"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-053",
+      "name": "清屏",
+      "category": "命令行与其他",
+      "purpose": "清除命令行屏幕内容",
+      "syntax": "cls / clear",
+      "example": "CMD 输入 cls，PowerShell 输入 clear",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "命令行与其他",
+        "清屏"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-054",
+      "name": "浏览命令历史",
+      "category": "命令行与其他",
+      "purpose": "查看之前执行过的命令",
+      "syntax": "↑ / ↓",
+      "example": "在终端按 ↑ / ↓ 切换",
+      "note": "PowerShell 支持更完善",
+      "badge": "快捷键",
+      "tags": [
+        "命令行与其他",
+        "浏览命令历史"
+      ],
+      "featured": false
+    },
+    {
+      "id": "windows-055",
+      "name": "Tab 自动补全",
+      "category": "命令行与其他",
+      "purpose": "补全文件名或命令",
+      "syntax": "Tab",
+      "example": "输入前几个字符后按 Tab",
+      "note": "多次按可循环候选",
+      "badge": "快捷键",
+      "tags": [
+        "命令行与其他",
+        "Tab 自动补全"
+      ],
+      "featured": false
+    }
+  ]
+}

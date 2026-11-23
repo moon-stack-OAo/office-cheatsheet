@@ -1,0 +1,1159 @@
+{
+  "key": "word",
+  "label": "Word 技巧",
+  "subtitle": "快捷键 · 排版 · 高效操作",
+  "icon": "📝",
+  "accent": "#2563eb",
+  "categories": [
+    "文件与窗口",
+    "编辑快捷键",
+    "格式设置",
+    "样式与排版",
+    "查找与替换",
+    "表格与对象",
+    "视图与导航",
+    "高效技巧"
+  ],
+  "entries": [
+    {
+      "id": "word-001",
+      "name": "新建文档",
+      "category": "文件与窗口",
+      "purpose": "快速新建空白文档",
+      "syntax": "Ctrl + N",
+      "example": "从任意界面新建 Word 文档",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文件与窗口",
+        "新建文档"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-002",
+      "name": "打开文件",
+      "category": "文件与窗口",
+      "purpose": "打开已有文档",
+      "syntax": "Ctrl + O",
+      "example": "调出「打开」对话框",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文件与窗口",
+        "打开文件"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-003",
+      "name": "保存文档",
+      "category": "文件与窗口",
+      "purpose": "保存当前文档",
+      "syntax": "Ctrl + S",
+      "example": "首次保存会弹出另存为对话框",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文件与窗口",
+        "保存文档"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-004",
+      "name": "另存为",
+      "category": "文件与窗口",
+      "purpose": "将文档另存为新文件",
+      "syntax": "F12",
+      "example": "可更换路径、格式或文件名",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文件与窗口",
+        "另存为"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-005",
+      "name": "关闭文档",
+      "category": "文件与窗口",
+      "purpose": "关闭当前文档窗口",
+      "syntax": "Ctrl + W",
+      "example": "未保存时会提示确认",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文件与窗口",
+        "关闭文档"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-006",
+      "name": "关闭程序",
+      "category": "文件与窗口",
+      "purpose": "退出 Word",
+      "syntax": "Alt + F4",
+      "example": "关闭整个应用程序",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "文件与窗口",
+        "关闭程序"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-007",
+      "name": "撤销",
+      "category": "编辑快捷键",
+      "purpose": "撤销上一步操作",
+      "syntax": "Ctrl + Z",
+      "example": "可连续撤销多步",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "撤销"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-008",
+      "name": "恢复",
+      "category": "编辑快捷键",
+      "purpose": "重做被撤销的操作",
+      "syntax": "Ctrl + Y",
+      "example": "Windows 通用重做键",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "恢复"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-009",
+      "name": "复制 / 剪切 / 粘贴",
+      "category": "编辑快捷键",
+      "purpose": "复制、剪切与粘贴内容",
+      "syntax": "Ctrl + C / X / V",
+      "example": "系统剪贴板通用",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "复制 / 剪切 / 粘贴"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-010",
+      "name": "选择性粘贴",
+      "category": "编辑快捷键",
+      "purpose": "粘贴为纯文本、无格式文本等",
+      "syntax": "Ctrl + Alt + V",
+      "example": "打开「选择性粘贴」对话框，可粘贴为无格式文本",
+      "note": "去网页复制内容时特别有用",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "选择性粘贴"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-011",
+      "name": "全选",
+      "category": "编辑快捷键",
+      "purpose": "选中当前文档全部内容",
+      "syntax": "Ctrl + A",
+      "example": "在表格内连按两次可选中整个表格",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "全选"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-012",
+      "name": "重复上一步操作",
+      "category": "编辑快捷键",
+      "purpose": "重复上一次命令或操作",
+      "syntax": "F4",
+      "example": "如设置一种格式后，选中别的文字按 F4 应用相同格式",
+      "note": "排版提效利器",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "重复上一步操作"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-013",
+      "name": "重复上一步操作",
+      "category": "编辑快捷键",
+      "purpose": "重复上一次命令（备选键）",
+      "syntax": "Ctrl + Y",
+      "example": "部分版本与 F4 等效",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "重复上一步操作"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-014",
+      "name": "插入分页符",
+      "category": "编辑快捷键",
+      "purpose": "在当前位置强制分页",
+      "syntax": "Ctrl + Enter",
+      "example": "比连按回车更规范",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "插入分页符"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-015",
+      "name": "插入分节符",
+      "category": "编辑快捷键",
+      "purpose": "插入分节以设置独立版式",
+      "syntax": "布局 → 分隔符 → 分节符",
+      "example": "用于不同章节不同页眉页脚或横竖混排",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "编辑快捷键",
+        "插入分节符"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-016",
+      "name": "换行不分段",
+      "category": "编辑快捷键",
+      "purpose": "软回车（手动换行符）",
+      "syntax": "Shift + Enter",
+      "example": "显示为 ↵，适合诗歌、地址等不产生新段落",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "编辑快捷键",
+        "换行不分段"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-017",
+      "name": "删除到行首 / 行尾",
+      "category": "编辑快捷键",
+      "purpose": "快速删除光标到行首的内容",
+      "syntax": "Ctrl + Backspace / Ctrl + Delete",
+      "example": "按词删除，比逐字删除快",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "删除到行首 / 行尾"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-018",
+      "name": "选择到行首 / 行尾",
+      "category": "编辑快捷键",
+      "purpose": "从光标处快速选中一行内容",
+      "syntax": "Shift + Home / Shift + End",
+      "example": "配合方向键扩展选区",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "编辑快捷键",
+        "选择到行首 / 行尾"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-019",
+      "name": "段落上移 / 下移",
+      "category": "编辑快捷键",
+      "purpose": "快速调整段落顺序",
+      "syntax": "Alt + Shift + ↑ / ↓",
+      "example": "在列表中移动当前段落",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "段落上移 / 下移"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-020",
+      "name": "加粗",
+      "category": "格式设置",
+      "purpose": "文字加粗",
+      "syntax": "Ctrl + B",
+      "example": "切换加粗状态",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "加粗"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-021",
+      "name": "倾斜",
+      "category": "格式设置",
+      "purpose": "文字倾斜",
+      "syntax": "Ctrl + I",
+      "example": "切换倾斜状态",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "倾斜"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-022",
+      "name": "下划线",
+      "category": "格式设置",
+      "purpose": "添加下划线",
+      "syntax": "Ctrl + U",
+      "example": "切换下划线状态",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "下划线"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-023",
+      "name": "增大 / 缩小字号",
+      "category": "格式设置",
+      "purpose": "逐步调整选中文字字号",
+      "syntax": "Ctrl + Shift + > / Ctrl + Shift + <",
+      "example": "Mac 上为 Ctrl + ] / Ctrl + [",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "增大 / 缩小字号"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-024",
+      "name": "字号快速缩放",
+      "category": "格式设置",
+      "purpose": "以 1 磅为单位微调字号",
+      "syntax": "Ctrl + [ / Ctrl + ]",
+      "example": "精细调整字号",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "字号快速缩放"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-025",
+      "name": "居中对齐",
+      "category": "格式设置",
+      "purpose": "段落居中",
+      "syntax": "Ctrl + E",
+      "example": "切换居中对齐",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "居中对齐"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-026",
+      "name": "两端对齐",
+      "category": "格式设置",
+      "purpose": "段落两端对齐",
+      "syntax": "Ctrl + J",
+      "example": "正式文档常用",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "两端对齐"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-027",
+      "name": "左对齐",
+      "category": "格式设置",
+      "purpose": "段落左对齐",
+      "syntax": "Ctrl + L",
+      "example": "默认对齐方式",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "左对齐"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-028",
+      "name": "右对齐",
+      "category": "格式设置",
+      "purpose": "段落右对齐",
+      "syntax": "Ctrl + R",
+      "example": "常用于落款、日期",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "右对齐"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-029",
+      "name": "1.5 倍行距",
+      "category": "格式设置",
+      "purpose": "设置 1.5 倍行距",
+      "syntax": "Ctrl + 5",
+      "example": "数字 5，快速调整行距",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "1.5 倍行距"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-030",
+      "name": "单倍行距",
+      "category": "格式设置",
+      "purpose": "设置单倍行距",
+      "syntax": "Ctrl + 1",
+      "example": "数字 1",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "单倍行距"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-031",
+      "name": "双倍行距",
+      "category": "格式设置",
+      "purpose": "设置双倍行距",
+      "syntax": "Ctrl + 2",
+      "example": "数字 2",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "双倍行距"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-032",
+      "name": "项目符号",
+      "category": "格式设置",
+      "purpose": "添加项目符号列表",
+      "syntax": "Ctrl + Shift + L",
+      "example": "切换项目符号",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "项目符号"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-033",
+      "name": "清除格式",
+      "category": "格式设置",
+      "purpose": "清除所选文字所有格式",
+      "syntax": "Ctrl + Space",
+      "example": "恢复为默认字体格式",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "清除格式"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-034",
+      "name": "格式刷（连续使用）",
+      "category": "格式设置",
+      "purpose": "复制格式到多处",
+      "syntax": "双击「格式刷」按钮",
+      "example": "双击后可连续刷多处，按 Esc 退出",
+      "note": "单击只能用一次",
+      "badge": "",
+      "tags": [
+        "格式设置",
+        "格式刷（连续使用）"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-035",
+      "name": "突出显示",
+      "category": "格式设置",
+      "purpose": "为文字添加高亮",
+      "syntax": "开始 → 突出显示（画笔图标）",
+      "example": "可先选颜色再选择文字",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "格式设置",
+        "突出显示"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-036",
+      "name": "上标 / 下标",
+      "category": "格式设置",
+      "purpose": "设置上标或下标",
+      "syntax": "Ctrl + Shift + +",
+      "example": "再次按下切换回正常",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "格式设置",
+        "上标 / 下标"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-037",
+      "name": "应用标题样式",
+      "category": "样式与排版",
+      "purpose": "为选中段落套用标题样式",
+      "syntax": "Ctrl + Alt + 1 / 2 / 3",
+      "example": "分别对应标题 1 / 2 / 3",
+      "note": "配合导航窗格生成大纲",
+      "badge": "快捷键",
+      "tags": [
+        "样式与排版",
+        "应用标题样式"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-038",
+      "name": "正文样式",
+      "category": "样式与排版",
+      "purpose": "恢复为正文样式",
+      "syntax": "Ctrl + Shift + N",
+      "example": "清除段落样式回到正文",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "样式与排版",
+        "正文样式"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-039",
+      "name": "更新样式",
+      "category": "样式与排版",
+      "purpose": "将当前格式更新到样式",
+      "syntax": "样式右键 → 更新以匹配所选内容",
+      "example": "改一处即可批量更新所有同样式段落",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "样式与排版",
+        "更新样式"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-040",
+      "name": "导航窗格",
+      "category": "样式与排版",
+      "purpose": "显示文档大纲便于跳转",
+      "syntax": "视图 → 导航窗格（勾选「标题」）",
+      "example": "点击标题快速定位，可拖动标题重排章节",
+      "note": "长文档必备",
+      "badge": "",
+      "tags": [
+        "样式与排版",
+        "导航窗格"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-041",
+      "name": "自动生成目录",
+      "category": "样式与排版",
+      "purpose": "根据标题样式生成目录",
+      "syntax": "引用 → 目录 → 自动目录",
+      "example": "前提是先为标题套用标题样式",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "样式与排版",
+        "自动生成目录"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-042",
+      "name": "更新目录",
+      "category": "样式与排版",
+      "purpose": "页码或标题变化后刷新目录",
+      "syntax": "右键目录 → 更新域 → 更新整个目录",
+      "example": "也可按 F9 更新选中的域",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "样式与排版",
+        "更新目录"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-043",
+      "name": "显示 / 隐藏编辑标记",
+      "category": "样式与排版",
+      "purpose": "查看段落标记、空格等隐藏符号",
+      "syntax": "Ctrl + Shift + 8",
+      "example": "数字 8，显示 ¶ 等标记",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "样式与排版",
+        "显示 / 隐藏编辑标记"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-044",
+      "name": "首行缩进",
+      "category": "样式与排版",
+      "purpose": "段落首行缩进两字符",
+      "syntax": "段落对话框 → 特殊格式 → 首行缩进",
+      "example": "设为「2 字符」符合中文排版习惯",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "样式与排版",
+        "首行缩进"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-045",
+      "name": "页眉页脚",
+      "category": "样式与排版",
+      "purpose": "进入页眉页脚编辑",
+      "syntax": "双击页眉或页脚区域",
+      "example": "双击正文区域退出编辑",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "样式与排版",
+        "页眉页脚"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-046",
+      "name": "查找",
+      "category": "查找与替换",
+      "purpose": "打开查找导航",
+      "syntax": "Ctrl + F",
+      "example": "左侧出现导航窗格，输入关键词定位",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "查找与替换",
+        "查找"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-047",
+      "name": "替换",
+      "category": "查找与替换",
+      "purpose": "批量替换文字",
+      "syntax": "Ctrl + H",
+      "example": "输入查找内容与替换为内容",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "查找与替换",
+        "替换"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-048",
+      "name": "定位",
+      "category": "查找与替换",
+      "purpose": "跳转到指定页 / 节 / 书签",
+      "syntax": "Ctrl + G",
+      "example": "输入页码快速跳转",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "查找与替换",
+        "定位"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-049",
+      "name": "通配符替换",
+      "category": "查找与替换",
+      "purpose": "用通配符批量处理文本",
+      "syntax": "Ctrl + H → 更多 → 勾选「使用通配符」",
+      "example": "如 ^p 段落标记、^t 制表符、? 单个字符、* 多个字符",
+      "note": "删除空行：查找 ^p^p 替换 ^p",
+      "badge": "快捷键",
+      "tags": [
+        "查找与替换",
+        "通配符替换"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-050",
+      "name": "批量删除空行",
+      "category": "查找与替换",
+      "purpose": "一次性清除多余空行",
+      "syntax": "Ctrl + H：查找 ^p^p → 替换 ^p",
+      "example": "反复替换直到无匹配",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "查找与替换",
+        "批量删除空行"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-051",
+      "name": "批量删除超链接",
+      "category": "查找与替换",
+      "purpose": "去掉文字上的超链接但保留文字",
+      "syntax": "Ctrl + H：查找 ^# 或 Alt+F9 后查找链接域",
+      "example": "更简单：全选后 Ctrl+Shift+F9 取消链接",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "查找与替换",
+        "批量删除超链接"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-052",
+      "name": "查找格式",
+      "category": "查找与替换",
+      "purpose": "按格式查找内容",
+      "syntax": "Ctrl + H → 更多 → 格式 → 字体 / 段落",
+      "example": "可批量替换某种格式的文字",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "查找与替换",
+        "查找格式"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-053",
+      "name": "插入表格",
+      "category": "表格与对象",
+      "purpose": "快速插入表格",
+      "syntax": "插入 → 表格 → 选择行列",
+      "example": "或在输入框中直接输入行列数",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "表格与对象",
+        "插入表格"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-054",
+      "name": "表格内插入行",
+      "category": "表格与对象",
+      "purpose": "在表格最后一行按 Tab 新增行",
+      "syntax": "Tab（光标位于末行末格）",
+      "example": "快速扩展表格",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "表格与对象",
+        "表格内插入行"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-055",
+      "name": "表格平均分布",
+      "category": "表格与对象",
+      "purpose": "平均分布行高 / 列宽",
+      "syntax": "表格工具 → 布局 → 平均分布各行 / 各列",
+      "example": "让表格整齐统一",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "表格与对象",
+        "表格平均分布"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-056",
+      "name": "表格跨页重复标题行",
+      "category": "表格与对象",
+      "purpose": "每页表格自动显示表头",
+      "syntax": "选中标题行 → 表格工具 → 布局 → 重复标题行",
+      "example": "长表格分页必备",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "表格与对象",
+        "表格跨页重复标题行"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-057",
+      "name": "拆分单元格",
+      "category": "表格与对象",
+      "purpose": "把一个单元格拆成多个",
+      "syntax": "表格工具 → 布局 → 拆分单元格",
+      "example": "设置行列数",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "表格与对象",
+        "拆分单元格"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-058",
+      "name": "插入图片",
+      "category": "表格与对象",
+      "purpose": "在文档中插入图片",
+      "syntax": "插入 → 图片 → 此设备",
+      "example": "或直接拖入图片文件",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "表格与对象",
+        "插入图片"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-059",
+      "name": "图片文字环绕",
+      "category": "表格与对象",
+      "purpose": "设置图片环绕方式",
+      "syntax": "右键图片 → 环绕文字 → 四周型 / 紧密型",
+      "example": "嵌入型最易导致排版跳动",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "表格与对象",
+        "图片文字环绕"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-060",
+      "name": "题注与交叉引用",
+      "category": "表格与对象",
+      "purpose": "为图表编号并引用",
+      "syntax": "引用 → 插入题注 / 交叉引用",
+      "example": "正文引用可随题注变化自动更新",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "表格与对象",
+        "题注与交叉引用"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-061",
+      "name": "拼写检查",
+      "category": "视图与导航",
+      "purpose": "打开拼写和语法检查",
+      "syntax": "F7",
+      "example": "逐处确认修改",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "视图与导航",
+        "拼写检查"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-062",
+      "name": "全屏阅读视图",
+      "category": "视图与导航",
+      "purpose": "切换到阅读视图",
+      "syntax": "Ctrl + F2 或视图 → 阅读视图",
+      "example": "适合阅读长文档",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "视图与导航",
+        "全屏阅读视图"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-063",
+      "name": "缩放视图",
+      "category": "视图与导航",
+      "purpose": "快速调整显示比例",
+      "syntax": "Ctrl + 鼠标滚轮",
+      "example": "按住 Ctrl 滚动鼠标滚轮",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "视图与导航",
+        "缩放视图"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-064",
+      "name": "字数统计",
+      "category": "视图与导航",
+      "purpose": "查看字数、页数统计",
+      "syntax": "审阅 → 字数统计",
+      "example": "状态栏也显示总字数",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "视图与导航",
+        "字数统计"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-065",
+      "name": "标尺",
+      "category": "视图与导航",
+      "purpose": "显示 / 隐藏标尺",
+      "syntax": "视图 → 标尺",
+      "example": "便于拖动缩进与制表位",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "视图与导航",
+        "标尺"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-066",
+      "name": "草稿 / 页面视图",
+      "category": "视图与导航",
+      "purpose": "切换文档视图模式",
+      "syntax": "视图 → 草稿 / 打印布局 / Web 版式",
+      "example": "草稿视图适合纯文字编辑",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "视图与导航",
+        "草稿 / 页面视图"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-067",
+      "name": "邮件合并",
+      "category": "高效技巧",
+      "purpose": "批量生成信函、标签、工资条",
+      "syntax": "邮件 → 开始邮件合并 → 选择收件人",
+      "example": "数据源可用 Excel 表格",
+      "note": "批量文档必备",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "邮件合并"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-068",
+      "name": "保护文档",
+      "category": "高效技巧",
+      "purpose": "限制他人编辑",
+      "syntax": "审阅 → 限制编辑 / 文档加密",
+      "example": "可设置仅允许批注或填写窗体",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "保护文档"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-069",
+      "name": "比较文档",
+      "category": "高效技巧",
+      "purpose": "查看两个版本的差异",
+      "syntax": "审阅 → 比较 → 比较",
+      "example": "选择原文档和修订文档",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "比较文档"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-070",
+      "name": "自动图文集",
+      "category": "高效技巧",
+      "purpose": "快速插入常用文本块",
+      "syntax": "选中文本 → 插入 → 文档部件 → 自动图文集",
+      "example": "把常用语保存后一键调用",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "自动图文集"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-071",
+      "name": "域代码切换",
+      "category": "高效技巧",
+      "purpose": "查看 / 隐藏域代码",
+      "syntax": "Alt + F9",
+      "example": "如页码、目录本质都是域",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "高效技巧",
+        "域代码切换"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-072",
+      "name": "更新域",
+      "category": "高效技巧",
+      "purpose": "刷新页码、目录等域结果",
+      "syntax": "F9",
+      "example": "打印前更新可避免页码过时",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "高效技巧",
+        "更新域"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-073",
+      "name": "强制分页",
+      "category": "高效技巧",
+      "purpose": "在指定位置另起一页",
+      "syntax": "Ctrl + Enter",
+      "example": "比连续回车更规范，不会因编辑错乱",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "高效技巧",
+        "强制分页"
+      ],
+      "featured": true
+    },
+    {
+      "id": "word-074",
+      "name": "打印预览",
+      "category": "高效技巧",
+      "purpose": "查看打印效果",
+      "syntax": "Ctrl + F2",
+      "example": "可检查页边距与分页是否合理",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "高效技巧",
+        "打印预览"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-075",
+      "name": "取消自动编号",
+      "category": "高效技巧",
+      "purpose": "关闭自动生成的列表编号",
+      "syntax": "Ctrl + Z（刚自动生成时）或自动更正选项关闭",
+      "example": "输入「1. 」后回车会自动编号",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "高效技巧",
+        "取消自动编号"
+      ],
+      "featured": false
+    },
+    {
+      "id": "word-076",
+      "name": "公式编辑器",
+      "category": "高效技巧",
+      "purpose": "插入数学公式",
+      "syntax": "Alt + =",
+      "example": "打开公式工具，支持 LaTeX 语法输入",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "高效技巧",
+        "公式编辑器"
+      ],
+      "featured": false
+    }
+  ]
+}

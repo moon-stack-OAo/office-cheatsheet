@@ -1,0 +1,46 @@
+# ============================================================
+# 办公速查手册 · Nginx 配置模板
+# 用法：复制到 /etc/nginx/conf.d/office-cheatsheet.conf
+#      把两处 【改这里】 替换成你的实际值，然后 nginx -t && nginx -s reload
+# ============================================================
+
+server {
+    # 【改这里 1】监听端口，例如 80 / 8080 / 9000
+    listen 8080;
+    server_name _;
+
+    # 【改这里 2】dist 目录在服务器上的绝对路径
+    root /var/www/office-cheatsheet;
+    index index.html;
+
+    charset utf-8;
+
+    # 数据 JSON 不缓存：改了 public/data/*.json 后刷新即可生效
+    location /data/ {
+        default_type application/json;
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+    }
+
+    # Service Worker 不能缓存，否则更新后用户拿到的还是旧版
+    location = /sw.js {
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+    }
+
+    location = /manifest.webmanifest {
+        add_header Cache-Control "no-cache";
+    }
+
+    # 其余静态资源可长缓存（文件名带 hash，更新不会读旧文件）
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+    location /assets/ {
+        expires 7d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # 可选：开启 gzip，体积更小的 JS/CSS 传输更快
+    gzip on;
+    gzip_types text/css application/javascript application/json image/svg+xml;
+    gzip_min_length 1024;
+}

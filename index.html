@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Excel 公式与 Word 技巧速查手册，支持搜索、分类、一键复制与多格式导出" name="description" />
+    <meta content="#0b0f17" name="theme-color" />
+    <link href="./manifest.webmanifest" rel="manifest" />
+    <link href="./icon.svg" rel="apple-touch-icon" />
+    <title>办公速查手册 · Excel 公式 & Word 技巧</title>
+    <script>
+      // 首屏前置应用主题，避免浅色用户刷新时闪一下深色（与 useTheme 的 key 保持一致）
+      try {
+        var t = JSON.parse(localStorage.getItem('office-cheatsheet:theme') || '"dark"')
+        document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark'
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="/src/main.tsx" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,632 @@
+{
+  "key": "ppt",
+  "label": "PPT 技巧",
+  "subtitle": "演示 · 动画 · 放映捷径",
+  "icon": "📽️",
+  "accent": "#ea580c",
+  "categories": [
+    "幻灯片操作",
+    "编辑快捷键",
+    "格式与设计",
+    "动画与切换",
+    "放映与演示",
+    "高效技巧"
+  ],
+  "entries": [
+    {
+      "id": "ppt-001",
+      "name": "新建幻灯片",
+      "category": "幻灯片操作",
+      "purpose": "插入一张新幻灯片",
+      "syntax": "Ctrl + M",
+      "example": "在当前幻灯片后插入新页",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "幻灯片操作",
+        "新建幻灯片"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-002",
+      "name": "复制幻灯片",
+      "category": "幻灯片操作",
+      "purpose": "快速复制当前幻灯片",
+      "syntax": "Ctrl + D",
+      "example": "复制后可直接修改内容",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "幻灯片操作",
+        "复制幻灯片"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-003",
+      "name": "选择全部幻灯片",
+      "category": "幻灯片操作",
+      "purpose": "在缩略图窗格全选",
+      "syntax": "Ctrl + A",
+      "example": "先点击左侧缩略图窗格",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "幻灯片操作",
+        "选择全部幻灯片"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-004",
+      "name": "删除幻灯片",
+      "category": "幻灯片操作",
+      "purpose": "删除当前选中幻灯片",
+      "syntax": "选中后按 Delete",
+      "example": "在缩略图窗格选中",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "幻灯片操作",
+        "删除幻灯片"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-005",
+      "name": "移动幻灯片",
+      "category": "幻灯片操作",
+      "purpose": "调整幻灯片顺序",
+      "syntax": "Ctrl + 上/下 或 拖动缩略图",
+      "example": "大纲视图下也可用 Alt+Shift+↑/↓",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "幻灯片操作",
+        "移动幻灯片"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-006",
+      "name": "版式切换",
+      "category": "幻灯片操作",
+      "purpose": "更改当前页版式",
+      "syntax": "开始 → 版式",
+      "example": "标题页、标题和内容、两栏内容等",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "幻灯片操作",
+        "版式切换"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-007",
+      "name": "撤销 / 恢复",
+      "category": "编辑快捷键",
+      "purpose": "撤销或重做上一步",
+      "syntax": "Ctrl + Z / Ctrl + Y",
+      "example": "与 Office 通用",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "撤销 / 恢复"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-008",
+      "name": "复制 / 粘贴格式",
+      "category": "编辑快捷键",
+      "purpose": "复制对象格式",
+      "syntax": "Ctrl + Shift + C / Ctrl + Shift + V",
+      "example": "先复制格式再粘贴格式",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "复制 / 粘贴格式"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-009",
+      "name": "组合对象",
+      "category": "编辑快捷键",
+      "purpose": "将多个对象组合为一个",
+      "syntax": "Ctrl + G",
+      "example": "选中多个形状后组合，便于整体移动",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "组合对象"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-010",
+      "name": "取消组合",
+      "category": "编辑快捷键",
+      "purpose": "拆开已组合对象",
+      "syntax": "Ctrl + Shift + G",
+      "example": "",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "取消组合"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-011",
+      "name": "置于顶层 / 底层",
+      "category": "编辑快捷键",
+      "purpose": "调整对象叠放层次",
+      "syntax": "右键 → 置于顶层 / 底层",
+      "example": "或开始 → 排列 → 上移一层",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "编辑快捷键",
+        "置于顶层 / 底层"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-012",
+      "name": "等比例缩放",
+      "category": "编辑快捷键",
+      "purpose": "拖动时保持宽高比",
+      "syntax": "按住 Shift 拖动角点",
+      "example": "不按 Shift 会拉伸变形",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "等比例缩放"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-013",
+      "name": "复制对象",
+      "category": "编辑快捷键",
+      "purpose": "原位快速复制对象",
+      "syntax": "Ctrl + D 或按住 Ctrl 拖动",
+      "example": "按住 Ctrl 拖动对象可快速复制",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "编辑快捷键",
+        "复制对象"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-014",
+      "name": "对齐分布",
+      "category": "编辑快捷键",
+      "purpose": "让多个对象整齐排列",
+      "syntax": "开始 → 排列 → 对齐",
+      "example": "左对齐、居中对齐、横向分布等",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "编辑快捷键",
+        "对齐分布"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-015",
+      "name": "设置背景格式",
+      "category": "格式与设计",
+      "purpose": "为幻灯片设置背景",
+      "syntax": "右键 → 设置背景格式",
+      "example": "可填充纯色、渐变、图片或纹理",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "格式与设计",
+        "设置背景格式"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-016",
+      "name": "幻灯片母版",
+      "category": "格式与设计",
+      "purpose": "统一修改所有页面样式",
+      "syntax": "视图 → 幻灯片母版",
+      "example": "改母版一次，全篇生效",
+      "note": "批量改 logo、字体必备",
+      "badge": "",
+      "tags": [
+        "格式与设计",
+        "幻灯片母版"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-017",
+      "name": "主题切换",
+      "category": "格式与设计",
+      "purpose": "一键更换整套配色字体",
+      "syntax": "设计 → 主题",
+      "example": "悬停可实时预览效果",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "格式与设计",
+        "主题切换"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-018",
+      "name": "取色器",
+      "category": "格式与设计",
+      "purpose": "吸取页面颜色应用到形状",
+      "syntax": "格式 → 形状填充 → 取色器",
+      "example": "确保配色一致",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "格式与设计",
+        "取色器"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-019",
+      "name": "字体嵌入",
+      "category": "格式与设计",
+      "purpose": "换电脑仍保留特殊字体",
+      "syntax": "文件 → 选项 → 保存 → 嵌入字体",
+      "example": "勾选「嵌入所有字符」更保险",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "格式与设计",
+        "字体嵌入"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-020",
+      "name": "格式刷（连续）",
+      "category": "格式与设计",
+      "purpose": "复制格式到多处",
+      "syntax": "双击格式刷按钮",
+      "example": "按 Esc 退出连续刷状态",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "格式与设计",
+        "格式刷（连续）"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-021",
+      "name": "添加动画",
+      "category": "动画与切换",
+      "purpose": "为对象设置进入/强调/退出动画",
+      "syntax": "动画 → 选择效果",
+      "example": "可分为进入、强调、退出、动作路径四类",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "动画与切换",
+        "添加动画"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-022",
+      "name": "动画窗格",
+      "category": "动画与切换",
+      "purpose": "查看和管理所有动画",
+      "syntax": "动画 → 动画窗格",
+      "example": "可调整顺序、开始方式、持续时间",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "动画与切换",
+        "动画窗格"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-023",
+      "name": "动画刷",
+      "category": "动画与切换",
+      "purpose": "把一个对象的动画复制给另一个",
+      "syntax": "动画 → 动画刷",
+      "example": "双击可连续应用",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "动画与切换",
+        "动画刷"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-024",
+      "name": "幻灯片切换",
+      "category": "动画与切换",
+      "purpose": "设置翻页过渡效果",
+      "syntax": "切换 → 选择效果",
+      "example": "可设置自动换片时间",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "动画与切换",
+        "幻灯片切换"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-025",
+      "name": "应用到全部",
+      "category": "动画与切换",
+      "purpose": "将当前切换效果应用所有页",
+      "syntax": "切换 → 应用到全部",
+      "example": "避免逐页设置",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "动画与切换",
+        "应用到全部"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-026",
+      "name": "触发动画",
+      "category": "动画与切换",
+      "purpose": "点击指定对象触发动画",
+      "syntax": "动画 → 触发 → 单击时",
+      "example": "实现交互式课件效果",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "动画与切换",
+        "触发动画"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-027",
+      "name": "从头放映",
+      "category": "放映与演示",
+      "purpose": "从第一页开始放映",
+      "syntax": "F5",
+      "example": "完整演示从首页开始",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "放映与演示",
+        "从头放映"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-028",
+      "name": "从当前页放映",
+      "category": "放映与演示",
+      "purpose": "从当前选中页开始",
+      "syntax": "Shift + F5",
+      "example": "调试单页非常方便",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "放映与演示",
+        "从当前页放映"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-029",
+      "name": "结束放映",
+      "category": "放映与演示",
+      "purpose": "退出放映模式",
+      "syntax": "Esc",
+      "example": "放映中按 Esc 返回编辑",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "放映与演示",
+        "结束放映"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-030",
+      "name": "黑屏 / 白屏",
+      "category": "放映与演示",
+      "purpose": "放映中临时黑屏",
+      "syntax": "B（黑屏）/ W（白屏）",
+      "example": "再按一次恢复",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "放映与演示",
+        "黑屏 / 白屏"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-031",
+      "name": "跳转到指定页",
+      "category": "放映与演示",
+      "purpose": "放映中直接输入页码跳转",
+      "syntax": "输入页码后按 Enter",
+      "example": "如输入 12 回车跳到第 12 页",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "放映与演示",
+        "跳转到指定页"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-032",
+      "name": "演讲者备注",
+      "category": "放映与演示",
+      "purpose": "查看/添加备注",
+      "syntax": "视图 → 备注页",
+      "example": "放映时可用演讲者视图看备注",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "放映与演示",
+        "演讲者备注"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-033",
+      "name": "激光指针",
+      "category": "放映与演示",
+      "purpose": "放映时模拟激光笔",
+      "syntax": "Ctrl + 鼠标左键",
+      "example": "放映状态下按住 Ctrl 移动鼠标",
+      "note": "",
+      "badge": "快捷键",
+      "tags": [
+        "放映与演示",
+        "激光指针"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-034",
+      "name": "SmartArt",
+      "category": "高效技巧",
+      "purpose": "快速绘制流程图/层次结构",
+      "syntax": "插入 → SmartArt",
+      "example": "比手绘形状更规范统一",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "SmartArt"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-035",
+      "name": "图表插入",
+      "category": "高效技巧",
+      "purpose": "插入可编辑的数据图表",
+      "syntax": "插入 → 图表",
+      "example": "会自动打开 Excel 数据表",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "图表插入"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-036",
+      "name": "屏幕录制",
+      "category": "高效技巧",
+      "purpose": "录制操作过程嵌入幻灯片",
+      "syntax": "插入 → 屏幕录制",
+      "example": "可录制区域并直接插入",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "屏幕录制"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-037",
+      "name": "导出为 PDF",
+      "category": "高效技巧",
+      "purpose": "将演示稿导出为 PDF",
+      "syntax": "文件 → 另存为 → PDF",
+      "example": "注意在选项中勾选「幻灯片」范围",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "导出为 PDF"
+      ],
+      "featured": true
+    },
+    {
+      "id": "ppt-038",
+      "name": "打包成 CD",
+      "category": "高效技巧",
+      "purpose": "打包字体和媒体便于异地放映",
+      "syntax": "文件 → 打包成 CD",
+      "example": "避免换电脑后字体丢失、视频打不开",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "打包成 CD"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-039",
+      "name": "提取图片",
+      "category": "高效技巧",
+      "purpose": "从 PPT 中批量提取图片",
+      "syntax": "另存为 → 网页 或 压缩包内 media 文件夹",
+      "example": "把 .pptx 后缀改为 .zip 打开",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "提取图片"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-040",
+      "name": "鼠标滚轮翻页",
+      "category": "高效技巧",
+      "purpose": "放映时用滚轮切换",
+      "syntax": "直接滚动鼠标滚轮",
+      "example": "部分版本需先设置",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "鼠标滚轮翻页"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ppt-041",
+      "name": "隐藏幻灯片",
+      "category": "高效技巧",
+      "purpose": "放映时跳过某页但保留内容",
+      "syntax": "右键缩略图 → 隐藏幻灯片",
+      "example": "适合备用内容页",
+      "note": "",
+      "badge": "",
+      "tags": [
+        "高效技巧",
+        "隐藏幻灯片"
+      ],
+      "featured": false
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+name: 构建并部署到 GitHub Pages
+
+# 触发：push 到 main/master，或手动在 Actions 页点击运行
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+# 允许 GITHUB_TOKEN 部署到 Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Pages 同一时间只允许一个部署；不取消进行中的（避免留下半截版本）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Pages
+        uses: actions/configure-pages@v5
+
+      - name: 安装 Node 并构建
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund && npm run build
+
+      - name: 上传站点产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

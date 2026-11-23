@@ -1,0 +1,49 @@
+# ============================================================
+# 反向代理场景：/office/  →  后端 1080 端口
+# 适用：后端用 python http.server / 其他静态服务直接托管 dist/
+# 用法：复制到 /etc/nginx/conf.d/office-cheatsheet.conf 后按注释调整
+# ============================================================
+
+server {
+    listen 80;
+    server_name 192.168.110.246;   # 或换成你的域名 / _
+
+    # 【关键 1】访问 /office 不带斜杠时补上，否则 ./assets/... 会解析到根路径
+    location = /office {
+        return 301 /office/;
+    }
+
+    # 【关键 2】proxy_pass 结尾必须带 /
+    # 带 / → 转发时去掉 /office/ 前缀，后端收到 /assets/xxx.js
+    # 不带 / → 后端收到 /office/assets/xxx.js，通常 404
+    # 若后端与 nginx 同机，用 127.0.0.1 避免绕一圈网卡；跨机则改回 192.168.110.246
+    location ^~ /office/ {
+        proxy_pass http://127.0.0.1:1080/;
+        proxy_set_header Host              $host;
+        proxy_set_header X-Real-IP         $remote_addr;
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_redirect off;
+    }
+
+    # Service Worker 更新必须即时（否则升级后用户拿旧缓存）
+    location ^~ /office/sw.js {
+        proxy_pass http://127.0.0.1:1080/sw.js;
+        proxy_hide_header Cache-Control;
+        add_header Cache-Control "no-store, must-revalidate";
+    }
+
+    # 数据 JSON 改完刷新即生效
+    location ^~ /office/data/ {
+        proxy_pass http://127.0.0.1:1080/data/;
+        proxy_hide_header Cache-Control;
+        add_header Cache-Control "no-store, must-revalidate";
+        default_type application/json;
+    }
+
+    # 带 hash 的构建产物可长缓存
+    location ^~ /office/assets/ {
+        proxy_pass http://127.0.0.1:1080/assets/;
+        expires 7d;
+        add_header Cache-Control "public, immutable";
+    }
+}

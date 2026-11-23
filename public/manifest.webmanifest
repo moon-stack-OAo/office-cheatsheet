@@ -1,0 +1,20 @@
+{
+  "name": "办公速查手册 · Excel 公式 & Word 技巧",
+  "short_name": "办公速查",
+  "description": "Excel 公式、Word / PPT / Windows / WPS 技巧速查，离线可用。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b0f17",
+  "theme_color": "#0b0f17",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
