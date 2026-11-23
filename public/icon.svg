@@ -7,5 +7,6 @@
   </defs>
   <rect width="512" height="512" rx="112" fill="url(#g)"/>
   <rect x="56" y="56" width="400" height="400" rx="88" fill="#0b0f17" opacity="0.16"/>
-  <text x="256" y="330" text-anchor="middle" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif" font-size="230">⚡</text>
+  <!-- 纯矢量闪电，避免依赖 emoji 字体 -->
+  <path d="M286 96 L150 282 L244 282 L206 432 L362 224 L268 224 Z" fill="#ffffff"/>
 </svg>
