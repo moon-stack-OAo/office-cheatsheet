@@ -105,7 +105,15 @@ export function useCopyCounts() {
     (id: string) => setCopyCounts((prev) => ({ ...prev, [id]: (prev[id] ?? 0) + 1 })),
     [setCopyCounts],
   )
-  return { copyCounts, recordCopy }
+  const remove = useCallback(
+    (id: string) => setCopyCounts((prev) => {
+      const next = { ...prev }
+      delete next[id]
+      return next
+    }),
+    [setCopyCounts],
+  )
+  return { copyCounts, recordCopy, remove }
 }
 
 /** 主题：dark / light */

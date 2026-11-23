@@ -89,7 +89,7 @@ export default function App() {
   const { history, push: pushHistory, clear: clearHistory } = useSearchHistory()
   const { customCategories, addCategory, removeCategory, replace: replaceCustomCategories } = useCustomCategories()
   const { entryNotes, setNote, replace: replaceNotes } = useEntryNotes()
-  const { copyCounts, recordCopy } = useCopyCounts()
+  const { copyCounts, recordCopy, remove: removeCopyCount } = useCopyCounts()
 
   const t = dict[locale]
 
@@ -114,6 +114,15 @@ export default function App() {
     () => apps.flatMap((app) => app.entries.map((entry) => ({ ...entry, app: app.key, appLabel: app.label }))),
     [apps],
   )
+
+  // 每个应用各自的条目数（内置 + 该应用的自定义条目），供顶部 tab 分别显示
+  const appCounts = useMemo(() => {
+    const map: Partial<Record<AppKey, number>> = {}
+    for (const a of apps) {
+      map[a.key] = a.entries.length + custom.filter((c) => c.app === a.key).length
+    }
+    return map
+  }, [apps, custom])
 
   const baseCategories = apps.find((a) => a.key === appKey)!.categories
 
@@ -244,6 +253,18 @@ export default function App() {
     pushToast(fmt(t.addedCatToast, { c: name }))
   }
 
+  // 删除自建条目时一并清理其收藏/备注/频次，避免孤儿数据
+  const handleRemoveCustom = (id: string) => {
+    removeCustom(id)
+    replaceFavs((prev) => prev.filter((x) => x !== id))
+    replaceNotes((prev) => {
+      const next = { ...prev }
+      delete next[id]
+      return next
+    })
+    removeCopyCount(id)
+  }
+
   const handleDeleteCategory = (cat: string) => {
     const moving = custom.filter((c) => c.app === appKey && c.category === cat)
     moving.forEach((c) => updateEntryCategory(c.id, '自定义'))
@@ -316,14 +337,14 @@ export default function App() {
 
       if (typing) return
 
+      if (anyModalOpen) return
+
       // 保留原有行为：非输入状态下 / 聚焦搜索
       if (e.key === '/') {
         e.preventDefault()
         searchRef.current?.focus()
         return
       }
-
-      if (anyModalOpen) return
 
       if (e.key === '?') {
         e.preventDefault()
@@ -361,7 +382,7 @@ export default function App() {
         entry={entry}
         isFav={isFav(entry.id)}
         onToggleFav={() => toggle(entry.id)}
-        onRemove={entry.custom ? () => removeCustom(entry.id) : undefined}
+        onRemove={entry.custom ? () => handleRemoveCustom(entry.id) : undefined}
         personalNote={entryNotes[entry.id]}
         copyCount={copyCounts[entry.id] ?? 0}
         onEditNote={() => setNoteEntry(entry)}
@@ -372,7 +393,8 @@ export default function App() {
   }
 
   const totalCustom = custom.length
-  const favCount = favs.length
+  // 侧栏「我的收藏」徽章须与点击后实际显示一致：只统计当前应用内的收藏
+  const favCount = appEntries.filter((e) => favs.includes(e.id)).length
 
   // 轻量加载态：JSON 读取很快，数据就绪后整体渲染
   if (loading) {
@@ -429,7 +451,7 @@ export default function App() {
             <span className="app-tab-icon">{a.icon}</span>
             <span className="app-tab-text">
               <strong>{trAppLabel(a.key, locale)}</strong>
-              <small>{trAppSubtitle(a.key, locale)} · {fmt(t.countUnit, { n: appEntries.length })}</small>
+              <small>{trAppSubtitle(a.key, locale)} · {fmt(t.countUnit, { n: appCounts[a.key] ?? 0 })}</small>
             </span>
           </button>
         ))}
@@ -564,7 +586,7 @@ export default function App() {
               <h2>{category === '全部' ? t.allEntriesTitle : trCategory(category, locale)}</h2>
               <p>{category === '我的收藏' ? t.favDesc : t.defaultDesc}</p>
             </div>
-            <div className="result-badge"><SlidersHorizontal size={13} /> {fmt(t.resultBadge, { n: filtered.length })}</div>
+            {view !== 'compare' && <div className="result-badge"><SlidersHorizontal size={13} /> {fmt(t.resultBadge, { n: filtered.length })}</div>}
           </div>
 
           {view === 'compare' ? (
@@ -614,7 +636,7 @@ export default function App() {
                   entry={e}
                   isFav={isFav(e.id)}
                   onToggleFav={() => toggle(e.id)}
-                  onRemove={e.custom ? () => removeCustom(e.id) : undefined}
+                  onRemove={e.custom ? () => handleRemoveCustom(e.id) : undefined}
                   personalNote={entryNotes[e.id]}
                   copyCount={copyCounts[e.id] ?? 0}
                   onEditNote={() => setNoteEntry(e)}
