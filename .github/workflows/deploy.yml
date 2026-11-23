@@ -26,6 +26,9 @@ jobs:
 
       - name: 配置 Pages
         uses: actions/configure-pages@v5
+        with:
+          # 仓库尚未启用 Pages 时自动启用（Source 设为 GitHub Actions）
+          enablement: true
 
       - name: 安装 Node 并构建
         uses: actions/setup-node@v4
