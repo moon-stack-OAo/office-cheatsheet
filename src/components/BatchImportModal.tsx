@@ -72,8 +72,8 @@ export default function BatchImportModal({ appKey, categories, onImport, onClose
     <div className="modal-backdrop" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
       <div className="modal">
         <div className="modal-head">
-          <h3><FileInput size={17} /> {t.batchTitle}</h3>
-          <button className="icon-btn" onClick={onClose} title={t.close}><X size={17} /></button>
+          <h3><FileInput size={16} strokeWidth={1.5} /> {t.batchTitle}</h3>
+          <button className="icon-btn" onClick={onClose} title={t.close}><X size={16} strokeWidth={1.5} /></button>
         </div>
         <form onSubmit={run}>
           <div className="import-format">
@@ -97,9 +97,9 @@ export default function BatchImportModal({ appKey, categories, onImport, onClose
           {result && (
             <div className="import-result">
               <div className="import-summary">
-                <span className="ok"><CheckCircle2 size={14} /> {fmt(t.successCount, { n: result.entries.length })}</span>
+                <span className="ok"><CheckCircle2 size={14} strokeWidth={1.5} /> {fmt(t.successCount, { n: result.entries.length })}</span>
                 {result.failures.length > 0 && (
-                  <span className="bad"><AlertTriangle size={14} /> {fmt(t.failCount, { n: result.failures.length })}</span>
+                  <span className="bad"><AlertTriangle size={14} strokeWidth={1.5} /> {fmt(t.failCount, { n: result.failures.length })}</span>
                 )}
                 {result.entries.length === 0 && result.failures.length === 0 && <span className="bad">{t.nothingToImport}</span>}
               </div>

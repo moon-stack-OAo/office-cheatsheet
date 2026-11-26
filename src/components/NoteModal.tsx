@@ -25,8 +25,8 @@ export default function NoteModal({ entry, note, onSave, onClose, t }: Props) {
     <div className="modal-backdrop" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
       <div className="modal">
         <div className="modal-head">
-          <h3><StickyNote size={17} /> {fmt(t.myNoteTitle, { name: entry.name })}</h3>
-          <button className="icon-btn" onClick={onClose} title={t.close}><X size={17} /></button>
+          <h3><StickyNote size={16} strokeWidth={1.5} /> {fmt(t.myNoteTitle, { name: entry.name })}</h3>
+          <button className="icon-btn" onClick={onClose} title={t.close}><X size={16} strokeWidth={1.5} /></button>
         </div>
         <form onSubmit={submit}>
           <label>

@@ -44,18 +44,18 @@ export default function ExportMenu({ entries, t }: Props) {
   }
 
   const items: Array<{ key: Format; icon: React.ReactNode; label: string; desc: string }> = [
-    { key: 'excel', icon: <FileSpreadsheet size={17} />, label: t.exportExcel, desc: t.excelDesc },
-    { key: 'word', icon: <FileText size={17} />, label: t.exportWord, desc: t.wordDesc },
-    { key: 'md', icon: <FileDown size={17} />, label: t.exportMarkdown, desc: t.mdDesc },
-    { key: 'print', icon: <Printer size={17} />, label: t.exportPrint, desc: t.printDesc },
+    { key: 'excel', icon: <FileSpreadsheet size={16} strokeWidth={1.5} />, label: t.exportExcel, desc: t.excelDesc },
+    { key: 'word', icon: <FileText size={16} strokeWidth={1.5} />, label: t.exportWord, desc: t.wordDesc },
+    { key: 'md', icon: <FileDown size={16} strokeWidth={1.5} />, label: t.exportMarkdown, desc: t.mdDesc },
+    { key: 'print', icon: <Printer size={16} strokeWidth={1.5} />, label: t.exportPrint, desc: t.printDesc },
   ]
 
   return (
     <div className="export-wrap" ref={ref}>
       <button className="btn btn-primary" onClick={() => setOpen((v) => !v)} disabled={!!busy}>
-        {busy ? <Loader2 size={16} className="spin" /> : done ? <Check size={16} /> : <FileDown size={16} />}
+        {busy ? <Loader2 size={16} strokeWidth={1.5} className="spin" /> : done ? <Check size={16} strokeWidth={1.5} /> : <FileDown size={16} strokeWidth={1.5} />}
         {busy ? t.exporting : `${t.exportCount.replace('{n}', String(entries.length))}`}
-        <ChevronDown size={15} className={open ? 'chevron open' : 'chevron'} />
+        <ChevronDown size={14} strokeWidth={1.5} className={open ? 'chevron open' : 'chevron'} />
       </button>
       {open && (
         <div className="export-menu">

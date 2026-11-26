@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {CalendarDays, Check, Copy, Shuffle, Sparkles, Star, X} from 'lucide-react'
+import {CalendarDays, Check, Copy, Shuffle, Star, X} from 'lucide-react'
 import type {AppKey, Entry} from '../types'
 import type {Dict} from '../i18n'
 import {highlight} from '../utils/highlight'
@@ -74,8 +74,8 @@ export default function DailyPickModal({ entries, isFav, onToggleFav, onCopy, on
     <div className="modal-backdrop" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
       <div className="modal daily-modal">
         <div className="modal-head">
-          <h3><CalendarDays size={17} /> {t.daily} <small className="daily-date">{dateKey}</small></h3>
-          <button className="icon-btn" onClick={onClose} title={t.close}><X size={17} /></button>
+          <h3><CalendarDays size={16} strokeWidth={1.5} /> {t.daily} <small className="daily-date">{dateKey}</small></h3>
+          <button className="icon-btn" onClick={onClose} title={t.close}><X size={16} strokeWidth={1.5} /></button>
         </div>
 
         {!entry ? (
@@ -87,7 +87,7 @@ export default function DailyPickModal({ entries, isFav, onToggleFav, onCopy, on
               <span className="daily-cat">{entry.category}</span>
               {entry.badge && <span className="entry-badge sm">{entry.badge}</span>}
               {entry.custom && <span className="entry-badge custom sm">{t.custom}</span>}
-              <span className="daily-seed"><Sparkles size={12} /> {t.dailyOne}</span>
+              <span className="daily-seed">{t.dailyOne}</span>
             </div>
 
             <h4 className="daily-name">{entry.name}</h4>
@@ -107,15 +107,15 @@ export default function DailyPickModal({ entries, isFav, onToggleFav, onCopy, on
 
             <div className="daily-actions">
               <button className="btn btn-primary" onClick={copySyntax}>
-                {copied ? <Check size={15} /> : <Copy size={15} />}
+                {copied ? <Check size={14} strokeWidth={1.5} /> : <Copy size={14} strokeWidth={1.5} />}
                 {copied ? t.copied : t.copySyntax}
               </button>
               <button className={`btn ${fav ? 'daily-fav-on' : ''}`} onClick={() => onToggleFav(entry.id)}>
-                <Star size={15} fill={fav ? 'currentColor' : 'none'} />
+                <Star size={14} strokeWidth={1.5} fill={fav ? 'currentColor' : 'none'} />
                 {fav ? t.unfav : t.fav}
               </button>
               <button className="btn" onClick={shuffle} title={t.shuffleTitle}>
-                <Shuffle size={15} /> {t.shuffle}
+                <Shuffle size={14} strokeWidth={1.5} /> {t.shuffle}
               </button>
             </div>
           </>

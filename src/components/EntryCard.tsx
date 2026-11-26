@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {Bookmark, Check, Copy, Flame, Pencil, Star, Trash2} from 'lucide-react'
+import {Bookmark, Check, Copy, Pencil, Star, Trash2} from 'lucide-react'
 import type {Entry} from '../types'
 import type {Dict} from '../i18n'
 import {highlight} from '../utils/highlight'
@@ -52,22 +52,22 @@ export default function EntryCard({
         <div className="entry-title-line">
           <h3 className="entry-name">{entry.name}</h3>
           {entry.badge && <span className="entry-badge">{entry.badge}</span>}
-          {entry.featured && <span className="entry-star" title={t.officialFeatured}><Bookmark size={12} fill="currentColor" /> {t.featured}</span>}
+          {entry.featured && <span className="entry-star" title={t.officialFeatured}><Bookmark size={12} strokeWidth={1.5} fill="currentColor" /> {t.featured}</span>}
           {entry.custom && <span className="entry-badge custom">{t.custom}</span>}
-          {copyCount > 0 && <span className="copy-badge" title={t.copyCountTitle}><Flame size={11} /> {copyCount}</span>}
+          {copyCount > 0 && <span className="copy-badge" title={t.copyCountTitle}>×{copyCount}</span>}
           <div className="entry-head-actions">
             {onEditNote && (
               <button className="icon-btn" onClick={onEditNote} title={t.editNote}>
-                <Pencil size={13} />
+                <Pencil size={14} strokeWidth={1.5} />
               </button>
             )}
             {onRemove && (
               <button className="icon-btn danger" onClick={onRemove} title={t.deleteCustom}>
-                <Trash2 size={14} />
+                <Trash2 size={14} strokeWidth={1.5} />
               </button>
             )}
             <button className={`icon-btn ${isFav ? 'fav' : ''}`} onClick={onToggleFav} title={isFav ? t.unfav : t.fav}>
-              <Star size={15} fill={isFav ? 'currentColor' : 'none'} />
+              <Star size={14} strokeWidth={1.5} fill={isFav ? 'currentColor' : 'none'} />
             </button>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function EntryCard({
           <div className="code-line">
             <code dangerouslySetInnerHTML={{ __html: highlight(entry.syntax) }} />
             <button className="copy-btn" onClick={() => copy(entry.syntax, 'syntax')} title={t.copySyntax}>
-              {copied === 'syntax' ? <Check size={15} /> : <Copy size={15} />}
+              {copied === 'syntax' ? <Check size={14} strokeWidth={1.5} /> : <Copy size={14} strokeWidth={1.5} />}
             </button>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function EntryCard({
             <div className="code-line">
               <code dangerouslySetInnerHTML={{ __html: highlight(entry.example) }} />
               <button className="copy-btn" onClick={() => copy(entry.example, 'example')} title={t.copyExample}>
-                {copied === 'example' ? <Check size={15} /> : <Copy size={15} />}
+                {copied === 'example' ? <Check size={14} strokeWidth={1.5} /> : <Copy size={14} strokeWidth={1.5} />}
               </button>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function EntryCard({
         {personalNote && (
           <div className="personal-note">
             <div className="personal-note-head">
-              <span><Pencil size={11} /> {t.myNote}</span>
+              <span><Pencil size={12} strokeWidth={1.5} /> {t.myNote}</span>
               {onEditNote && <button onClick={onEditNote} title={t.edit}>{t.edit}</button>}
             </div>
             <p>{personalNote}</p>

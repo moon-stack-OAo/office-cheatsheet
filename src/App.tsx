@@ -1,21 +1,25 @@
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import {
   CalendarDays,
+  Check,
   CircleHelp,
   Columns2,
-  Flame,
+  FileSpreadsheet,
+  FileText,
+  FolderOpen,
   History,
   Info,
+  Keyboard,
   Layers,
   LayoutGrid,
   List,
   Maximize2,
   Minimize2,
+  Monitor,
   Moon,
+  Presentation,
   Plus,
   Search,
-  SlidersHorizontal,
-  Sparkles,
   Star,
   Sun,
   Trash2,
@@ -51,6 +55,24 @@ import DailyPickModal from './components/DailyPickModal'
 import ShortcutsHelpModal from './components/ShortcutsHelpModal'
 
 type ViewMode = 'card' | 'table' | 'compare'
+
+const APP_ICONS: Record<AppKey, typeof FileSpreadsheet> = {
+  excel: FileSpreadsheet,
+  word: FileText,
+  ppt: Presentation,
+  windows: Monitor,
+  wps: FolderOpen,
+}
+
+function BrandMark() {
+  return (
+    <div className="brand-mark" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M9.2 1.5 3.5 8.4h3.4L6.2 14.5 12.5 7.6H9.1L9.2 1.5Z" fill="currentColor" />
+      </svg>
+    </div>
+  )
+}
 
 export default function App() {
   const [appKey, setAppKey] = useState<AppKey>('excel')
@@ -410,7 +432,7 @@ export default function App() {
     <div className={`app-shell ${immersive ? 'immersive' : ''}`} data-theme={theme}>
       <header className="topbar">
         <div className="brand">
-          <div className="brand-mark">⚡</div>
+          <BrandMark />
           <div>
             <h1>{t.brandTitle}</h1>
             <p>{t.brandSubtitle}</p>
@@ -425,38 +447,41 @@ export default function App() {
             </select>
           </div>
           <button className="btn daily-trigger" onClick={() => setShowDaily(true)} title={t.dailyTitle}>
-            <CalendarDays size={15} /> {t.daily}
+            <CalendarDays size={16} strokeWidth={1.5} /> {t.daily}
           </button>
           <button className="icon-btn lang-btn" onClick={toggleLocale} title={t.languageTitle}>
             {locale === 'zh' ? 'EN' : '中'}
           </button>
           <button className="icon-btn theme-btn" onClick={toggleTheme} title={theme === 'dark' ? t.themeToLight : t.themeToDark}>
-            {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+            {theme === 'dark' ? <Sun size={16} strokeWidth={1.5} /> : <Moon size={16} strokeWidth={1.5} />}
           </button>
           <button className="icon-btn theme-btn" onClick={() => setImmersive(true)} title={t.immersiveTitle}>
-            <Maximize2 size={17} />
+            <Maximize2 size={16} strokeWidth={1.5} />
           </button>
           <ExportMenu entries={exportEntries} t={t} />
         </div>
       </header>
 
       <div className="app-tabs">
-        {apps.map((a) => (
-          <button
-            key={a.key}
-            className={`app-tab ${appKey === a.key ? 'active' : ''}`}
-            onClick={() => switchApp(a.key)}
-            style={{ '--accent': a.accent } as React.CSSProperties}
-          >
-            <span className="app-tab-icon">{a.icon}</span>
-            <span className="app-tab-text">
-              <strong>{trAppLabel(a.key, locale)}</strong>
-              <small>{trAppSubtitle(a.key, locale)} · {fmt(t.countUnit, { n: appCounts[a.key] ?? 0 })}</small>
-            </span>
-          </button>
-        ))}
+        {apps.map((a) => {
+          const Icon = APP_ICONS[a.key]
+          return (
+            <button
+              key={a.key}
+              className={`app-tab ${appKey === a.key ? 'active' : ''}`}
+              onClick={() => switchApp(a.key)}
+              style={{ '--accent': a.accent } as React.CSSProperties}
+            >
+              <span className="app-tab-icon"><Icon size={18} strokeWidth={1.5} /></span>
+              <span className="app-tab-text">
+                <strong>{trAppLabel(a.key, locale)}</strong>
+                <small>{trAppSubtitle(a.key, locale)} · {fmt(t.countUnit, { n: appCounts[a.key] ?? 0 })}</small>
+              </span>
+            </button>
+          )
+        })}
         <button className="app-tab add-tab" onClick={() => setShowAdd(true)} title={t.addCustomTitle}>
-          <span className="app-tab-icon"><Plus size={20} /></span>
+          <span className="app-tab-icon"><Plus size={18} strokeWidth={1.5} /></span>
           <span className="app-tab-text">
             <strong>{t.addEntry}</strong>
             <small>{fmt(t.customTabHint, { n: totalCustom })}</small>
@@ -467,7 +492,7 @@ export default function App() {
       <div className="toolbar">
         <div className="search-wrap">
           <div className="search-box">
-            <Search size={17} />
+            <Search size={16} strokeWidth={1.5} />
             <input
               ref={searchRef}
               value={query}
@@ -477,22 +502,22 @@ export default function App() {
               onKeyDown={(e) => { if (e.key === 'Enter') commitSearch(query) }}
               placeholder={fmt(t.searchPlaceholder, { app: trAppLabel(appKey, locale) })}
             />
-            {query && <button onClick={() => setQuery('')} title={t.clear}><X size={15} /></button>}
+            {query && <button onClick={() => setQuery('')} title={t.clear}><X size={14} strokeWidth={1.5} /></button>}
             {history.length > 0 && (
               <button className="history-trigger" onMouseDown={(e) => e.preventDefault()} onClick={() => setShowHistory((v) => !v)} title={t.history}>
-                <History size={15} />
+                <History size={14} strokeWidth={1.5} />
               </button>
             )}
           </div>
           {showHistory && history.length > 0 && (
             <div className="history-menu">
               <div className="history-head">
-                <span><History size={13} /> {t.recentSearch}</span>
-                <button onClick={clearHistory}><Trash2 size={13} /> {t.clear}</button>
+                <span><History size={14} strokeWidth={1.5} /> {t.recentSearch}</span>
+                <button onClick={clearHistory}><Trash2 size={14} strokeWidth={1.5} /> {t.clear}</button>
               </div>
               {history.map((h) => (
                 <button key={h} className="history-item" onMouseDown={(e) => e.preventDefault()} onClick={() => { commitSearch(h); setShowHistory(false) }}>
-                  <Search size={12} /> {h}
+                  <Search size={12} strokeWidth={1.5} /> {h}
                 </button>
               ))}
             </div>
@@ -504,26 +529,26 @@ export default function App() {
         </label>
         <label className="toggle">
           <input type="checkbox" checked={priorityByFreq} onChange={(e) => setPriorityByFreq(e.target.checked)} />
-          <span><Flame size={12} /> {t.highFreqFirst}</span>
+          <span>{t.highFreqFirst}</span>
         </label>
         <div className="view-switch">
-          <button className={view === 'card' ? 'active' : ''} onClick={() => setView('card')} title={t.cardView}><LayoutGrid size={16} /></button>
-          <button className={view === 'table' ? 'active' : ''} onClick={() => setView('table')} title={t.tableView}><List size={16} /></button>
-          <button className={view === 'compare' ? 'active' : ''} onClick={() => setView('compare')} title={t.compareView}><Columns2 size={16} /></button>
+          <button className={view === 'card' ? 'active' : ''} onClick={() => setView('card')} title={t.cardView}><LayoutGrid size={16} strokeWidth={1.5} /></button>
+          <button className={view === 'table' ? 'active' : ''} onClick={() => setView('table')} title={t.tableView}><List size={16} strokeWidth={1.5} /></button>
+          <button className={view === 'compare' ? 'active' : ''} onClick={() => setView('compare')} title={t.compareView}><Columns2 size={16} strokeWidth={1.5} /></button>
         </div>
         <button className="icon-btn theme-btn help-trigger" onClick={() => setShowHelp(true)} title={t.helpTitle}>
-          <CircleHelp size={17} />
+          <CircleHelp size={16} strokeWidth={1.5} />
         </button>
       </div>
 
       <div className="layout">
         <aside className="sidebar">
-          <div className="sidebar-title"><Layers size={14} /> {t.categories}</div>
+          <div className="sidebar-title"><Layers size={14} strokeWidth={1.5} /> {t.categories}</div>
           <button className={`cat-item ${category === '全部' ? 'active' : ''}`} onClick={() => setCategory('全部')}>
             {t.all} <span className="cat-count">{appEntries.length}</span>
           </button>
           <button className={`cat-item fav-cat ${category === '我的收藏' ? 'active' : ''}`} onClick={() => setCategory('我的收藏')}>
-            <Star size={13} fill={category === '我的收藏' ? 'currentColor' : 'none'} /> {t.favorites} <span className="cat-count">{favCount}</span>
+            <Star size={14} strokeWidth={1.5} fill={category === '我的收藏' ? 'currentColor' : 'none'} /> {t.favorites} <span className="cat-count">{favCount}</span>
           </button>
           <div className="sidebar-divider" />
           {app.categories.map((c) => {
@@ -537,7 +562,7 @@ export default function App() {
                 </button>
                 {isCustom && (
                   <button className="cat-del" onClick={() => handleDeleteCategory(c)} title={fmt(t.deleteCategoryTitle, { c: trCategory(c, locale) })}>
-                    <X size={12} />
+                    <X size={12} strokeWidth={1.5} />
                   </button>
                 )}
               </div>
@@ -555,12 +580,12 @@ export default function App() {
                 placeholder={t.categoryName}
                 autoFocus
               />
-              <button onClick={confirmAddCategory} title={t.confirm}>✓</button>
-              <button onClick={() => { setAddingCategory(false); setNewCategory('') }} title={t.cancel}>✕</button>
+              <button onClick={confirmAddCategory} title={t.confirm}><Check size={12} strokeWidth={1.5} /></button>
+              <button onClick={() => { setAddingCategory(false); setNewCategory('') }} title={t.cancel}><X size={12} strokeWidth={1.5} /></button>
             </div>
           ) : (
             <button className="cat-item add-cat" onClick={() => setAddingCategory(true)}>
-              <Plus size={13} /> {t.addCategory}
+              <Plus size={14} strokeWidth={1.5} /> {t.addCategory}
             </button>
           )}
           <div className="sidebar-divider" />
@@ -575,9 +600,9 @@ export default function App() {
             t={t}
           />
           <div className="sidebar-foot">
-            <Info size={13} /> {fmt(t.sidebarFoot, { n: appEntries.length, m: filtered.length })}
+            <Info size={14} strokeWidth={1.5} /> {fmt(t.sidebarFoot, { n: appEntries.length, m: filtered.length })}
           </div>
-          <div className="sidebar-tip"><Sparkles size={12} /> <kbd>/</kbd> {t.tipSearch} · <kbd>j</kbd>/<kbd>k</kbd> {t.tipSwitch} · <kbd>?</kbd> {t.tipHelp}</div>
+          <div className="sidebar-tip"><Keyboard size={12} strokeWidth={1.5} /> <kbd>/</kbd> {t.tipSearch} · <kbd>j</kbd>/<kbd>k</kbd> {t.tipSwitch} · <kbd>?</kbd> {t.tipHelp}</div>
         </aside>
 
         <main className="content">
@@ -586,13 +611,13 @@ export default function App() {
               <h2>{category === '全部' ? t.allEntriesTitle : trCategory(category, locale)}</h2>
               <p>{category === '我的收藏' ? t.favDesc : t.defaultDesc}</p>
             </div>
-            {view !== 'compare' && <div className="result-badge"><SlidersHorizontal size={13} /> {fmt(t.resultBadge, { n: filtered.length })}</div>}
+            {view !== 'compare' && <div className="result-badge">{fmt(t.resultBadge, { n: filtered.length })}</div>}
           </div>
 
           {view === 'compare' ? (
             appEntries.length === 0 ? (
               <div className="empty-state">
-                <Columns2 size={32} />
+                <Columns2 size={32} strokeWidth={1.5} />
                 <h3>{t.emptyCompareTitle}</h3>
                 <p>{t.emptyCompareDesc}</p>
               </div>
@@ -621,7 +646,7 @@ export default function App() {
             )
           ) : filtered.length === 0 ? (
             <div className="empty-state">
-              <Search size={32} />
+              <Search size={32} strokeWidth={1.5} />
               <h3>{category === '我的收藏' && favCount === 0 ? t.emptyFavTitle : t.emptySearchTitle}</h3>
               <p>{category === '我的收藏' && favCount === 0 ? t.emptyFavDesc : t.emptySearchDesc}</p>
               <button className="btn" onClick={() => { setQuery(''); setOnlyFeatured(false); setCategory('全部') }}>{t.viewAll}</button>
@@ -654,7 +679,7 @@ export default function App() {
                 <tbody>
                   {displayEntries.map((e) => (
                     <tr key={e.id}>
-                      <td><strong>{e.name}</strong>{e.badge && <span className="entry-badge sm">{e.badge}</span>}{(copyCounts[e.id] ?? 0) > 0 && <span className="copy-badge sm"><Flame size={11} /> {copyCounts[e.id]}</span>}</td>
+                      <td><strong>{e.name}</strong>{e.badge && <span className="entry-badge sm">{e.badge}</span>}{(copyCounts[e.id] ?? 0) > 0 && <span className="copy-badge sm">×{copyCounts[e.id]}</span>}</td>
                       <td><span className="table-cat">{trCategory(e.category, locale)}</span></td>
                       <td>{e.purpose}</td>
                       <td><code dangerouslySetInnerHTML={{ __html: highlight(e.syntax) }} /></td>
@@ -671,7 +696,7 @@ export default function App() {
 
       {immersive && (
         <button className="immersive-exit" onClick={() => setImmersive(false)} title={t.exitImmersiveTitle}>
-          <Minimize2 size={17} /> <span>{t.exitImmersive}</span>
+          <Minimize2 size={16} strokeWidth={1.5} /> <span>{t.exitImmersive}</span>
         </button>
       )}
 

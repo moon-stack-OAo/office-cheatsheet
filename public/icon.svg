@@ -1,12 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="办公速查手册">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2563eb"/>
-      <stop offset="1" stop-color="#16a34a"/>
-    </linearGradient>
-  </defs>
-  <rect width="512" height="512" rx="112" fill="url(#g)"/>
-  <rect x="56" y="56" width="400" height="400" rx="88" fill="#0b0f17" opacity="0.16"/>
-  <!-- 纯矢量闪电，避免依赖 emoji 字体 -->
+  <rect width="512" height="512" rx="112" fill="#3b6fd9"/>
+  <!-- 扁平闪电：单色，无渐变 -->
   <path d="M286 96 L150 282 L244 282 L206 432 L362 224 L268 224 Z" fill="#ffffff"/>
 </svg>

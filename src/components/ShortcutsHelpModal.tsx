@@ -20,8 +20,8 @@ export default function ShortcutsHelpModal({ onClose, t }: Props) {
     <div className="modal-backdrop" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
       <div className="modal help-modal">
         <div className="modal-head">
-          <h3><CircleHelp size={17} /> {t.helpModalTitle}</h3>
-          <button className="icon-btn" onClick={onClose} title={t.close}><X size={17} /></button>
+          <h3><CircleHelp size={16} strokeWidth={1.5} /> {t.helpModalTitle}</h3>
+          <button className="icon-btn" onClick={onClose} title={t.close}><X size={16} strokeWidth={1.5} /></button>
         </div>
         <p className="help-intro">{t.helpIntro}</p>
         <div className="help-list">

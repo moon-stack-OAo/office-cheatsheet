@@ -89,17 +89,17 @@ export default function DataBackupPanel({
 
   return (
     <div className="backup-panel">
-      <div className="backup-title"><Database size={13} /> {t.dataBackup}</div>
+      <div className="backup-title"><Database size={14} strokeWidth={1.5} /> {t.dataBackup}</div>
       <div className="backup-actions">
         <button className="backup-btn" onClick={exportBackup} title={t.exportBackupTitle}>
-          <Download size={13} /> {t.exportBackup}
+          <Download size={14} strokeWidth={1.5} /> {t.exportBackup}
         </button>
         <button className="backup-btn" onClick={() => fileRef.current?.click()} title={t.importBackupTitle}>
-          <Upload size={13} /> {t.importBackup}
+          <Upload size={14} strokeWidth={1.5} /> {t.importBackup}
         </button>
       </div>
       <button className="backup-btn batch" onClick={onOpenBatchImport}>
-        <FileInput size={13} /> {t.batchImport}
+        <FileInput size={14} strokeWidth={1.5} /> {t.batchImport}
       </button>
       <input ref={fileRef} type="file" accept="application/json,.json" onChange={handleFile} hidden />
     </div>

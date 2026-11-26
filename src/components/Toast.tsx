@@ -21,9 +21,9 @@ export default function Toast({ toasts, onDismiss, t }: Props) {
     <div className="toast-stack">
       {toasts.map((item) => (
         <div key={item.id} className={`toast ${item.type}`} role="status">
-          {item.type === 'error' ? <XCircle size={16} /> : <CheckCircle2 size={16} />}
+          {item.type === 'error' ? <XCircle size={16} strokeWidth={1.5} /> : <CheckCircle2 size={16} strokeWidth={1.5} />}
           <span>{item.message}</span>
-          <button onClick={() => onDismiss(item.id)} title={t.close}><X size={13} /></button>
+          <button onClick={() => onDismiss(item.id)} title={t.close}><X size={14} strokeWidth={1.5} /></button>
         </div>
       ))}
     </div>
